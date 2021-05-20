@@ -12,14 +12,14 @@
 }
 
 .header {
-  color: white;
-  min-height: 40vh;
   background-image: url("/images/bg-pattern-intro.svg"), -webkit-gradient(linear, left top, right top, from(#ff7a85), to(#ff525d));
   background-image: url("/images/bg-pattern-intro.svg"), linear-gradient(to right, #ff7a85, #ff525d);
   background-repeat: no-repeat;
-  background-size: 120rem 120rem, 100% 100%;
-  background-position: center left -5rem, center center;
+  background-position: center center;
+  background-size: 80rem 80rem, 100% 100%;
   border-bottom-left-radius: 6rem;
+  color: white;
+  min-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,10 +30,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem;
+}
+
+@media screen and (min-width: 1080px) {
+  .header {
+    background-size: 150rem 150rem, 100% 100%;
+    background-position: center left, center center;
+  }
+}
+
+.header__logo {
+  margin-right: 4rem;
 }
 
 .header__nav {
+  margin: 2rem auto;
+  width: 70%;
+  max-width: 1080px;
   -ms-flex-item-align: stretch;
       align-self: stretch;
   display: -webkit-box;
@@ -44,72 +57,143 @@
           align-items: center;
 }
 
-@media screen and (max-width: 960px) {
-  .header__dropdown {
+.header__links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+  .header__links-wrapper {
     display: none;
   }
 }
 
-@media screen and (min-width: 960px) {
-  .header__dropdown {
-    display: block;
-  }
+.header__links {
+  display: none;
 }
 
-@media screen and (max-width: 960px) {
-  .header__links {
-    display: block;
-  }
+.header__drop-btn {
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: transparent;
+  margin-right: 2rem;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 960px) {
-  .header__links {
-    display: none;
-  }
+.header__drop-btn a {
+  color: white;
 }
 
 .header__login-btn {
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: transparent;
+  margin-right: 2rem;
+  opacity: 0.8;
+  cursor: pointer;
+  color: white;
   margin-left: auto;
 }
 
-@media screen and (max-width: 960px) {
-  .header__login-btn {
-    display: none;
-  }
+.header__login-btn a {
+  color: white;
 }
 
-@media screen and (min-width: 960px) {
-  .header__login-btn {
-    display: block;
-  }
+.header__signup-btn {
+  padding: 0.8rem 0.5rem;
+  margin: 0 0.5rem;
+  border: 0.2rem solid transparent;
+  background-color: white;
+  color: #ff525d;
+  border-radius: 2rem;
+  min-width: 10rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 960px) {
-  .header__signup-btn {
-    display: none;
-  }
+.header__signup-btn a {
+  color: #ff525d;
 }
 
-@media screen and (min-width: 960px) {
-  .header__signup-btn {
-    display: block;
-  }
-}
-
-.hamburger {
+.header__hamburger-btn {
   margin-left: auto;
 }
 
-@media screen and (max-width: 960px) {
-  .hamburger {
-    display: block;
+@media screen and (min-width: 1080px) {
+  .header__hamburger-btn {
+    display: none;
   }
 }
 
-@media screen and (min-width: 960px) {
-  .hamburger {
-    display: none;
-  }
+.header__title {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  margin-top: 5rem;
+}
+
+.header__description {
+  text-align: center;
+  opacity: 0.7;
+  font-size: 1.5rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.header__buttons-wrapper {
+  margin-bottom: 4rem;
+}
+
+.header__start-btn {
+  padding: 0.8rem 0.5rem;
+  margin: 0 0.5rem;
+  border: 0.2rem solid transparent;
+  background-color: white;
+  color: #ff525d;
+  border-radius: 2rem;
+  min-width: 10rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.header__start-btn a {
+  color: #ff525d;
+}
+
+.header__learn-btn {
+  padding: 0.8rem 0.5rem;
+  margin: 0 0.5rem;
+  border: 0.2rem solid transparent;
+  background-color: white;
+  color: #ff525d;
+  border-radius: 2rem;
+  min-width: 10rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  opacity: 0.8;
+}
+
+.header__learn-btn a {
+  color: #ff525d;
 }
 
 body {

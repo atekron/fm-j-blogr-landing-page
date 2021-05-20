@@ -1,6 +1,7 @@
 @import "./base/resets";
 @import "./base/typography";
 @import "./abstracts/variables";
+@import "./abstracts/mixins";
 @import "./layout/header", "./layout/first-section", "./layout/second-section",
   "./layout/third-section", "./layout/footer";
 

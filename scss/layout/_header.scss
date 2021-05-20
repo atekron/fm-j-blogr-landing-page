@@ -1,42 +1,107 @@
-@import "../abstracts/variables";
-@import "../abstracts/mixins";
-
 .header {
-  color: $white;
-  // background: linear-gradient(to right, $very-light-red, $light-red);
-  min-height: 40vh;
+  //header layout and backround
   background-image: url("/images/bg-pattern-intro.svg"),
     linear-gradient(to right, $very-light-red, $light-red);
   background-repeat: no-repeat;
-  background-size: 120rem 120rem, 100% 100%;
-  background-position: center left -5rem, center center;
+  background-position: center center;
+  background-size: 80rem 80rem, 100% 100%;
+
+  @media screen and (min-width: $desktop) {
+    background-size: 150rem 150rem, 100% 100%;
+    background-position: center left, center center;
+  }
   border-bottom-left-radius: 6rem;
+  color: $white;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
 
+  //logo styles
+  &__logo {
+    margin-right: 4rem;
+  }
+
+  // navbar styles
   &__nav {
+    margin: 2rem auto;
+    width: 70%;
+    max-width: $maxScreenWidth;
     align-self: stretch;
     display: flex;
     align-items: center;
   }
-  &__dropdown {
-    @include mediaHideOnMobile;
+
+  &__links-wrapper {
+    @media screen and (max-width: $desktop) {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
+
+  // &__dropdown {
+  // }
+
   &__links {
-    @include mediaHideOnDesktop;
+    display: none;
   }
+
+  &__drop-btn {
+    @include navLink;
+  }
+
   &__login-btn {
-    @include mediaHideOnMobile;
+    @include navLink;
+    color: white;
     margin-left: auto;
   }
-  &__signup-btn {
-    @include mediaHideOnMobile;
-  }
-}
 
-.hamburger {
-  margin-left: auto;
-  @include mediaHideOnDesktop;
+  &__signup-btn {
+    @include btn;
+  }
+
+  &__hamburger-btn {
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+    margin-left: auto;
+  }
+
+  // header title and description styles
+  &__title {
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    margin-top: 5rem;
+  }
+
+  &__description {
+    text-align: center;
+    opacity: 0.7;
+    font-size: 1.5rem;
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  // header buttons styles
+  &__buttons-wrapper {
+    margin-bottom: 4rem;
+  }
+
+  &__start-btn {
+    @include btn;
+  }
+
+  &__learn-btn {
+    @include btn;
+    background-color: transparent;
+    color: $white;
+    border-color: white;
+    opacity: 0.8;
+  }
 }
