@@ -1,0 +1,35 @@
+.footer {
+  background-color: $very-dark-black-blue;
+  color: $white;
+  display: flex;
+  min-height: 30vh;
+  border-top-right-radius: 6rem;
+  // padding: 4rem 10rem;
+
+  &__logo {
+    margin-top: -0.5rem;
+  }
+
+  &__nav {
+    @include maxWidth;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &__links {
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  &__link {
+    margin-bottom: 1rem;
+  }
+}

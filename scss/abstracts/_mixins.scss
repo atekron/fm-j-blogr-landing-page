@@ -28,3 +28,8 @@
   opacity: 0.8;
   cursor: pointer;
 }
+
+@mixin maxWidth {
+  width: 70%;
+  max-width: $maxScreenWidth;
+}
