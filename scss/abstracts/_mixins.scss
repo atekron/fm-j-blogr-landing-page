@@ -1,0 +1,19 @@
+@mixin mediaHideOnDesktop {
+  @media screen and (max-width: $desktop) {
+    display: block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+@mixin mediaHideOnMobile {
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
+}

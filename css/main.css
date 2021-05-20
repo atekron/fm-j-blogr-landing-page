@@ -11,6 +11,107 @@
   list-style: none;
 }
 
+.header {
+  color: white;
+  min-height: 40vh;
+  background-image: url("/images/bg-pattern-intro.svg"), -webkit-gradient(linear, left top, right top, from(#ff7a85), to(#ff525d));
+  background-image: url("/images/bg-pattern-intro.svg"), linear-gradient(to right, #ff7a85, #ff525d);
+  background-repeat: no-repeat;
+  background-size: 120rem 120rem, 100% 100%;
+  background-position: center left -5rem, center center;
+  border-bottom-left-radius: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.header__nav {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .header__dropdown {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__dropdown {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header__links {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__links {
+    display: none;
+  }
+}
+
+.header__login-btn {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 960px) {
+  .header__login-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__login-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .header__signup-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header__signup-btn {
+    display: block;
+  }
+}
+
+.hamburger {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 960px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .hamburger {
+    display: none;
+  }
+}
+
 body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;

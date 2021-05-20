@@ -1,0 +1,42 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.header {
+  color: $white;
+  // background: linear-gradient(to right, $very-light-red, $light-red);
+  min-height: 40vh;
+  background-image: url("/images/bg-pattern-intro.svg"),
+    linear-gradient(to right, $very-light-red, $light-red);
+  background-repeat: no-repeat;
+  background-size: 120rem 120rem, 100% 100%;
+  background-position: center left -5rem, center center;
+  border-bottom-left-radius: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  &__nav {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+  }
+  &__dropdown {
+    @include mediaHideOnMobile;
+  }
+  &__links {
+    @include mediaHideOnDesktop;
+  }
+  &__login-btn {
+    @include mediaHideOnMobile;
+    margin-left: auto;
+  }
+  &__signup-btn {
+    @include mediaHideOnMobile;
+  }
+}
+
+.hamburger {
+  margin-left: auto;
+  @include mediaHideOnDesktop;
+}
