@@ -203,16 +203,8 @@
   transition: all 0.3s;
 }
 
-.header__signup-btn a {
-  color: #ff525d;
-}
-
 .header__signup-btn:hover {
   background-color: #ff7a85;
-  color: white;
-}
-
-.header__signup-btn:hover a {
   color: white;
 }
 
@@ -287,16 +279,8 @@
   margin-bottom: 1rem;
 }
 
-.header__start-btn a {
-  color: #ff525d;
-}
-
 .header__start-btn:hover {
   background-color: #ff7a85;
-  color: white;
-}
-
-.header__start-btn:hover a {
   color: white;
 }
 
@@ -320,16 +304,8 @@
   margin-bottom: 1rem;
 }
 
-.header__learn-btn a {
-  color: #ff525d;
-}
-
 .header__learn-btn:hover {
   background-color: #ff7a85;
-  color: white;
-}
-
-.header__learn-btn:hover a {
   color: white;
 }
 
@@ -337,10 +313,6 @@
   background-color: white;
   color: #ff525d;
   opacity: 1;
-}
-
-.header__learn-btn:hover a {
-  color: #ff525d;
 }
 
 .first-section {
@@ -790,6 +762,8 @@
   .mobile-menu__signup-btn {
     border: none;
     background-color: #ff525d;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     color: white;
     border-radius: 3rem;
     padding: 1rem 3rem;
@@ -798,9 +772,13 @@
     font-weight: 600;
     font-size: 1.5rem;
     cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
-  .mobile-menu__signup-btn a {
-    color: white;
+  .mobile-menu__signup-btn:hover {
+    background-color: white;
+    color: #ff525d;
+    opacity: 1;
   }
 }
 

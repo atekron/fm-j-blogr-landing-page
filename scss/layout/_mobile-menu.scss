@@ -77,10 +77,8 @@
     &__signup-btn {
       border: none;
       background-color: $light-red;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
       color: white;
-      a {
-        color: white;
-      }
       border-radius: 3rem;
       padding: 1rem 3rem;
       margin: 1rem auto;
@@ -88,6 +86,12 @@
       font-weight: 600;
       font-size: 1.5rem;
       cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        background-color: white;
+        color: $light-red;
+        opacity: 1;
+      }
     }
   }
 }
