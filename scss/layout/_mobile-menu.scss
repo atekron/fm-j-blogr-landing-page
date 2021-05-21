@@ -1,0 +1,93 @@
+.mobile-menu {
+  &__links-wrapper {
+    display: none;
+  }
+
+  @media screen and (max-width: $desktop) {
+    &__links-wrapper {
+      background-color: white;
+      color: black;
+      border-radius: 0.5rem;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      width: 30rem;
+      margin-left: -15rem;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-evenly;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    &__dropdown {
+      input[type="radio"] {
+        display: none;
+      }
+      input:checked ~ .mobile-menu__links {
+        display: block;
+        height: 100%;
+      }
+
+      margin: 1rem;
+      &:nth-of-type(3) {
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 0.1rem solid $grayish-blue;
+      }
+    }
+
+    &__drop-btn {
+      font-family: "Overpass", sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin: 1rem;
+      cursor: pointer;
+    }
+
+    &__links {
+      display: none;
+      height: 0;
+      background-color: $grayish-blue;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      font-family: "Overpass", sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+
+    &__link {
+      a {
+        color: $very-dark-blue;
+      }
+      padding: 0.5rem;
+    }
+
+    &__login-btn {
+      border: none;
+      background-color: transparent;
+      margin: 1rem;
+      font-family: "Overpass", sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    &__signup-btn {
+      border: none;
+      background-color: $light-red;
+      color: white;
+      a {
+        color: white;
+      }
+      border-radius: 3rem;
+      padding: 1rem 3rem;
+      margin: 1rem auto;
+      font-family: "Overpass", sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
