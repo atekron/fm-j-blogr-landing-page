@@ -18,7 +18,7 @@
   align-items: center;
   @media screen and (max-width: $desktop) {
     padding: 0 2rem;
-    min-height: 45rem;
+    min-height: 42rem;
   }
 
   //logo styles
@@ -73,6 +73,7 @@
       display: none;
     }
     margin-left: auto;
+    cursor: pointer;
   }
 
   // header title and description styles
@@ -97,17 +98,16 @@
 
   // header buttons styles
   &__buttons-wrapper {
-    min-width: $small;
+    // min-width: $small;
     margin-bottom: 4rem;
-    // @media screen and (max-width: $desktop) {
-    //   width: 100%;
-    //   display: flex;
-    //   justify-content: space-around;
-    // }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__start-btn {
     @include btn;
+    margin-bottom: 1rem;
   }
 
   &__learn-btn {
@@ -116,5 +116,14 @@
     color: $white;
     border-color: white;
     opacity: 0.8;
+    margin-bottom: 1rem;
+    &:hover {
+      background-color: white;
+      color: $light-red;
+      opacity: 1;
+      a {
+        color: $light-red;
+      }
+    }
   }
 }

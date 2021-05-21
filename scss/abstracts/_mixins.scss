@@ -13,13 +13,21 @@
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $very-light-red;
+    color: $white;
+    a {
+      color: $white;
+    }
+  }
 }
 
 @mixin navLink {
   color: white;
   border: none;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   background-color: transparent;
   a {
     color: white;
@@ -27,6 +35,13 @@
   margin-right: 2rem;
   opacity: 0.8;
   cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    font-weight: 700;
+  }
 }
 
 @mixin maxWidth {

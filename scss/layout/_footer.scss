@@ -47,5 +47,13 @@
 
   &__link {
     margin-bottom: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      text-decoration-color: $white;
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+      opacity: 1;
+    }
   }
 }

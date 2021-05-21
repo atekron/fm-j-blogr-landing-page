@@ -42,7 +42,7 @@
 @media screen and (max-width: 1080px) {
   .header {
     padding: 0 2rem;
-    min-height: 45rem;
+    min-height: 42rem;
   }
 }
 
@@ -94,32 +94,50 @@
   color: white;
   border: none;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   background-color: transparent;
   margin-right: 2rem;
   opacity: 0.8;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__drop-btn a {
   color: white;
 }
 
+.header__drop-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  font-weight: 700;
+}
+
 .header__login-btn {
   color: white;
   border: none;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   background-color: transparent;
   margin-right: 2rem;
   opacity: 0.8;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   color: white;
   margin-left: auto;
 }
 
 .header__login-btn a {
   color: white;
+}
+
+.header__login-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  font-weight: 700;
 }
 
 .header__signup-btn {
@@ -133,14 +151,26 @@
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__signup-btn a {
   color: #ff525d;
 }
 
+.header__signup-btn:hover {
+  background-color: #ff7a85;
+  color: white;
+}
+
+.header__signup-btn:hover a {
+  color: white;
+}
+
 .header__hamburger-btn {
   margin-left: auto;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1080px) {
@@ -172,8 +202,15 @@
 }
 
 .header__buttons-wrapper {
-  min-width: 375px;
   margin-bottom: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header__start-btn {
@@ -187,10 +224,22 @@
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-bottom: 1rem;
 }
 
 .header__start-btn a {
   color: #ff525d;
+}
+
+.header__start-btn:hover {
+  background-color: #ff7a85;
+  color: white;
+}
+
+.header__start-btn:hover a {
+  color: white;
 }
 
 .header__learn-btn {
@@ -204,13 +253,35 @@
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   background-color: transparent;
   color: white;
   border-color: white;
   opacity: 0.8;
+  margin-bottom: 1rem;
 }
 
 .header__learn-btn a {
+  color: #ff525d;
+}
+
+.header__learn-btn:hover {
+  background-color: #ff7a85;
+  color: white;
+}
+
+.header__learn-btn:hover a {
+  color: white;
+}
+
+.header__learn-btn:hover {
+  background-color: white;
+  color: #ff525d;
+  opacity: 1;
+}
+
+.header__learn-btn:hover a {
   color: #ff525d;
 }
 
@@ -570,6 +641,16 @@
 
 .footer__link {
   margin-bottom: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  opacity: 1;
 }
 
 body {
