@@ -8,24 +8,25 @@
   align-items: center;
   color: $very-dark-blue;
 
+  &__text {
+    max-width: 50%;
+  }
+
   &__subtitle {
     margin: 2rem 0;
-    max-width: 50%;
-    margin-left: auto;
     font-size: 1.5rem;
   }
 
   &__paragraph {
-    max-width: 50%;
     margin-bottom: 4rem;
-    margin-left: auto;
     line-height: 1.8;
   }
 
-  &::after {
+  &__text::before {
     content: url("/images/illustration-laptop-desktop.svg");
     position: absolute;
-    transform: translateX(-55%);
-    z-index: -2;
+    transform: translateX(-100%);
+    top: 4rem;
+    z-index: 1;
   }
 }

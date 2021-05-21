@@ -312,26 +312,27 @@
   color: #1f3f5b;
 }
 
+.third-section__text {
+  max-width: 50%;
+}
+
 .third-section__subtitle {
   margin: 2rem 0;
-  max-width: 50%;
-  margin-left: auto;
   font-size: 1.5rem;
 }
 
 .third-section__paragraph {
-  max-width: 50%;
   margin-bottom: 4rem;
-  margin-left: auto;
   line-height: 1.8;
 }
 
-.third-section::after {
+.third-section__text::before {
   content: url("/images/illustration-laptop-desktop.svg");
   position: absolute;
-  -webkit-transform: translateX(-55%);
-          transform: translateX(-55%);
-  z-index: -2;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  top: 4rem;
+  z-index: 1;
 }
 
 .footer {
