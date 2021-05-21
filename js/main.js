@@ -15,3 +15,11 @@ document
       mobileMenu.style.display = "none";
     }
   });
+
+window.addEventListener("resize", () => {
+  document.querySelector(".mobile-menu__links-wrapper").style.display = "none";
+  document.querySelector(".header__hamburger-btn__open").style.display =
+    "inline-block";
+  document.querySelector(".header__hamburger-btn__close").style.display =
+    "none";
+});
