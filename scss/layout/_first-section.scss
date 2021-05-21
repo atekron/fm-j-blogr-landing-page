@@ -7,15 +7,26 @@
   flex-direction: column;
   align-items: center;
   color: $very-dark-blue;
+  @media screen and (max-width: $desktop) {
+    margin: 2rem auto;
+    text-align: center;
+  }
 
   &__title {
     margin: 5rem;
     font-size: 2.5rem;
+    @media screen and (max-width: $desktop) {
+      margin: 5rem 0;
+      font-size: 2rem;
+    }
   }
 
   &__subtitle {
     margin: 2rem 0;
     font-size: 1.5rem;
+    @media screen and (max-width: $desktop) {
+      font-size: 2rem;
+    }
   }
 
   &__paragraph {
@@ -23,12 +34,32 @@
     margin-bottom: 6rem;
     line-height: 1.8;
     // padding: 2rem;
+    @media screen and (max-width: $desktop) {
+      max-width: 100%;
+    }
   }
 
-  &::after {
+  &__image-mobile {
+    display: none;
+    @media screen and (max-width: $desktop) {
+      display: block;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &::before {
     content: url("/images/illustration-editor-desktop.svg");
     position: absolute;
     transform: translateX(55%);
     z-index: -2;
+
+    @media screen and (max-width: $desktop) {
+      content: "";
+    }
   }
 }

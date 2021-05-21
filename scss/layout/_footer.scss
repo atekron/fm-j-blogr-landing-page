@@ -8,6 +8,10 @@
 
   &__logo {
     margin-top: -0.5rem;
+
+    @media screen and (max-width: $desktop) {
+      margin: 3rem;
+    }
   }
 
   &__nav {
@@ -15,18 +19,30 @@
     margin: 4rem auto;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: $desktop) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__subtitle {
     margin-bottom: 2rem;
     font-size: 1rem;
     font-weight: 400;
+    @media screen and (max-width: $desktop) {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
   }
 
   &__links {
     opacity: 0.8;
     font-weight: 400;
     font-size: 1rem;
+    @media screen and (max-width: $desktop) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__link {

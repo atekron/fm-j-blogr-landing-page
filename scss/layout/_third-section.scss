@@ -10,11 +10,31 @@
 
   &__text {
     max-width: 50%;
+    @media screen and (max-width: $desktop) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__image-mobile {
+    display: none;
+    @media screen and (max-width: $desktop) {
+      display: block;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
   }
 
   &__subtitle {
     margin: 2rem 0;
     font-size: 1.5rem;
+    @media screen and (max-width: $desktop) {
+      font-size: 2rem;
+    }
   }
 
   &__paragraph {
@@ -28,5 +48,8 @@
     transform: translateX(-100%);
     top: 4rem;
     z-index: 1;
+    @media screen and (max-width: $desktop) {
+      content: "";
+    }
   }
 }
