@@ -12,7 +12,7 @@
   }
   border-bottom-left-radius: 6rem;
   color: $white;
-  min-height: 60vh;
+  min-height: 33rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,7 +72,6 @@
   &__title {
     text-align: center;
     font-size: 4rem;
-    font-family: "Overpass", sans-serif;
     font-weight: 600;
     margin-top: 5rem;
   }
@@ -81,7 +80,6 @@
     text-align: center;
     opacity: 0.7;
     font-size: 1.5rem;
-    font-family: "Overpass", sans-serif;
     font-weight: 300;
     margin-top: 2rem;
     margin-bottom: 4rem;
